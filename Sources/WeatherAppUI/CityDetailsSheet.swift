@@ -18,12 +18,11 @@ struct CityDetailsSheet: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(weather.currentTemp)
-                .font(.largeTitle)
-                .scaleEffect(4)
+                .font(.system(size: 100))
                 .foregroundColor(.white)
-                .position(x: 90, y: 120)
+                .offset(x: 30, y: 80)
             
             Spacer()
             
