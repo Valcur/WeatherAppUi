@@ -1,3 +1,3 @@
 # WeatherAppUI
 
-A description of this package.
+Affiche les informations provenant du composant
