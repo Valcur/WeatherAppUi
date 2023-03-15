@@ -30,6 +30,7 @@ struct MyCitiesView: View {
     }
     
     struct MyCitiesTopBar: View {
+        @EnvironmentObject var cityWeatherVM: CitiesWeatherViewModel
         @State private var showingNewCitySheet = false
         
         var body: some View {
@@ -45,7 +46,7 @@ struct MyCitiesView: View {
                 })
             }.padding()
             .sheet(isPresented: $showingNewCitySheet) {
-                NewCitySheet()
+                NewCitySheet(citySearchViewModel: cityWeatherVM.citySearchVM)
             }
         }
     }
